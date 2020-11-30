@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+# React with Sass
+
+## Objectives
+
+After this demo presentation students should be familiar with basic, practical usage of:
+
+- ...
+
+## Info
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -8,63 +16,55 @@ In the project directory, you can run:
 
 ### `yarn start`
 
-Runs the app in the development mode.\
+Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
+The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
 ### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
+Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+## Steps
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Project setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Add `node-sass`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+After creating project with CRA add `node-sass` to the project by running the command:
 
-### `yarn eject`
+for npm
+`npm install node-sass`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+for yarn
+`yarn add node-sass`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Now you can start development mode with standards Create React App commands.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Add Sass directory
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Create dir `styles` in `src`.
+2. Create `index.scss` file in `styles`.
+3. Import `index.scss` in `index.js`:
+   `import './src/styles/index.scss';`
+4. To test Sass add any style to `./src/styles/index.scss`, for instance:
 
-## Learn More
+```
+body {
+  background-image: red;
+}
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Possible issues:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+If the application crashes after linking Sass file in `index.js` with an error `Error: Node Sass version X.X.X is incompatible with ^X.X.X`, for instance: `Error: Node Sass version 5.0.0 is incompatible with ^4.0.0` you should uninstall `node-sass` and install it appropriate version of this module.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Check your node version by running the command:
+   `node -v`.
+2. Uninstall `node-sass`
+   `npm uninstall node-sass`
+   then install it again with the right (replace X.X with version number):
+   `npm install node-sass@X.X`
+   You can read more about the issue and find information which `node-sass` version is compatible with your `node` version [here](https://stackoverflow.com/questions/64625050/error-node-sass-version-5-0-0-is-incompatible-with-4-0-0)
