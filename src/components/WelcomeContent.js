@@ -9,7 +9,11 @@ const WelcomeContent = () => {
   return (
     <div className="welcome-content">
       <div className="welcome-content__form">
-        <img src={common.logoImage} alt="we are W" className="logo"/>
+        <img
+          src={common.logoImage}
+          alt="we are W"
+          className="logo"
+        />
         <Switch>
           <Route exact path="/">
             <RegisterForm />
