@@ -6,7 +6,7 @@ import {fields, buttons} from '../config/authForms';
 
 const LoginForm = () => {
   return (
-    <div className="form--login" >
+    <div className="form--login custom-form" >
       <Button
         text="Log in with Facebook"
         variant="facebook"
