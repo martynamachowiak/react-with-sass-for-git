@@ -1,20 +1,25 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
-import Button from './Button';
-import Input from './Input';
-import {fields, buttons} from '../config/authForms';
+import React from "react";
+import { Link } from "react-router-dom";
+import Button from "./Button";
+import Input from "./Input";
+import { fields, buttons } from "../config/authForms";
 
 const LoginForm = () => {
 
   const handleSubmit = () => {
     console.log('Form submitted!');
   }
+
+  const handleClick = () => {
+    console.log("YOU CLICKED ME");
+  };
+
   return (
-    <div className="form--login" data-sample="I'm lazy today">
+    <div className="form--login custom-login-form" data-sample="I'm lazy today">
       <Button
         text="Log in with Facebook"
         variant="facebook"
-        onClickHandler={() => {}}
+        onClickHandler={handleClick}
       />
       <div className="divider">or</div>
       <Input field={fields.email} />
@@ -27,6 +32,6 @@ const LoginForm = () => {
       <p>Forgot password? Click here to <Link to="/reset-password">reset it</Link>.</p>
     </div>
   );
-}
+};
 
 export default LoginForm;
